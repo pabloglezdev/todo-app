@@ -1,1 +1,78 @@
 @import "tailwindcss";
+@import "./_variables.css";
+
+/* 1. CONFIGURACIÓN DE TEMA PARA TAILWIND V4 */
+@theme {
+  /* Colores Principales */
+  --color-todoist-red: var(--accents---red);
+  --color-mac-sidebar: var(--materials----controls---sidebar);
+
+  /* Accents */
+  --color-accent-red: var(--accents---red);
+  --color-accent-red-dark: var(--accents---red----dark);
+  --color-accent-orange: var(--accents---orange);
+  --color-accent-green: var(--accents---green);
+  --color-accent-blue: var(--accents---blue);
+  --color-accent-gray: var(--accents---gray);
+
+  /* Fills */
+  --color-fill-primary: var(--fills---primary);
+  --color-fill-secondary: var(--fills---secondary);
+  --color-fill-vibrant-primary: var(--fills----vibrant---primary);
+  --color-fill-vibrant-secondary: var(--fills----vibrant---secondary);
+
+  /* Text Colors */
+  --color-text-primary: var(--text---primary);
+  --color-text-secondary: var(--text---secondary);
+  --color-text-tertiary: var(--text---tertiary);
+
+  /* UI Materials */
+  --color-ui-sidebar: var(--materials----controls---sidebar);
+  --color-ui-titlebar: var(--materials----controls---title--bar);
+  --color-ui-selection: var(--materials----controls---selection--focused);
+
+  /* Font Sizes */
+  --font-size-mac-l-title: var(--large--title---regular);
+  --font-size-mac-title-1: var(--title-1---regular);
+  --font-size-mac-title-2: var(--title-2---regular);
+  --font-size-mac-headline: var(--headline---regular);
+  --font-size-mac-body: var(--body---regular);
+
+  /* Shadows */
+  --shadow-mac-primary: var(--shadows----light---primary);
+  --shadow-mac-card: var(--card---default);
+}
+
+/* 3. RESET CSS INTEGRADO */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--white);
+    color: var(--text---primary);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  }
+
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Scrollbars estilo Mac */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--fills----vibrant---tertiary);
+    border-radius: 10px;
+  }
+}
