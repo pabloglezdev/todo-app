@@ -1,4 +1,4 @@
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   return <aside>Sidebar</aside>;
 };
 

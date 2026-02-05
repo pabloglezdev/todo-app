@@ -1,4 +1,4 @@
-const MainContent = () => {
+const MainContent: React.FC = () => {
   return <div>Main Content</div>;
 };
 
