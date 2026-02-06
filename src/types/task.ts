@@ -5,7 +5,7 @@ interface Task {
   completed: boolean;
   dueDate?: Date;
   createdAt: Date;
-  priority?: 'low' | 'medium' | 'high' | 'urgent';
+  priority?: 'none' | 'low' | 'medium' | 'high';
 }
 
 export type { Task };

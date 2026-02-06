@@ -1,5 +1,14 @@
+import Checkbox from '../../ui/Checkbox';
+
 const MainContent: React.FC = () => {
-  return <div>Main Content</div>;
+  return (
+    <div>
+      <Checkbox />
+      <Checkbox priority="low" />
+      <Checkbox priority="medium" isChecked />
+      <Checkbox priority="high" />
+    </div>
+  );
 };
 
 export default MainContent;

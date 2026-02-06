@@ -3,44 +3,156 @@
 
 /* 1. CONFIGURACIÓN DE TEMA PARA TAILWIND V4 */
 @theme {
-  /* Colores Principales */
-  --color-todoist-red: var(--accents---red);
-  --color-mac-sidebar: var(--materials----controls---sidebar);
+  /* --- Base & Accents --- */
+  --color-white: var(--white);
+  --color-accents-red: var(--accents---red);
+  --color-accents-red-dark: var(--accents---red----dark);
+  --color-accents-orange: var(--accents---orange);
+  --color-accents-orange-dark: var(--accents---orange----dark);
+  --color-accents-yellow: var(--accents---yellow);
+  --color-accents-yellow-dark: var(--accents---yellow----dark);
+  --color-accents-green: var(--accents---green);
+  --color-accents-green-dark: var(--accents---green----dark);
+  --color-accents-mint: var(--accents---mint);
+  --color-accents-mint-dark: var(--accents---mint----dark);
+  --color-accents-teal: var(--accents---teal);
+  --color-accents-teal-dark: var(--accents---teal----dark);
+  --color-accents-cyan: var(--accents---cyan);
+  --color-accents-cyan-dark: var(--accents---cyan----dark);
+  --color-accents-blue: var(--accents---blue);
+  --color-accents-blue-dark: var(--accents---blue----dark);
+  --color-accents-indigo: var(--accents---indigo);
+  --color-accents-indigo-dark: var(--accents---indigo---dark);
+  --color-accents-purple: var(--accents---purple);
+  --color-accents-purple-dark: var(--accents---purple----dark);
+  --color-accents-pink: var(--accents---pink);
+  --color-accents-pink-dark: var(--accents---pink----dark);
+  --color-accents-gray: var(--accents---gray);
+  --color-accents-gray-dark: var(--accents---gray----dark);
+  --color-accents-brown: var(--accents---brown);
+  --color-accents-brown-dark: var(--accents---brown----dark);
 
-  /* Accents */
-  --color-accent-red: var(--accents---red);
-  --color-accent-red-dark: var(--accents---red----dark);
-  --color-accent-orange: var(--accents---orange);
-  --color-accent-green: var(--accents---green);
-  --color-accent-blue: var(--accents---blue);
-  --color-accent-gray: var(--accents---gray);
+  /* --- Vibrant Accents --- */
+  --color-accents-vibrant-red: var(--accents----vibrant---red);
+  --color-accents-vibrant-red-dark: var(--accents----vibrant---red----dark);
+  --color-accents-vibrant-orange: var(--accents----vibrant---orange);
+  --color-accents-vibrant-orange-dark: var(--accents----vibrant---orange----dark);
+  --color-accents-vibrant-yellow: var(--accents----vibrant---yellow);
+  --color-accents-vibrant-yellow-dark: var(--accents----vibrant---yellow----dark);
+  --color-accents-vibrant-green: var(--accents----vibrant---green);
+  --color-accents-vibrant-green-dark: var(--accents----vibrant---green----dark);
+  --color-accents-vibrant-mint: var(--accents----vibrant---mint);
+  --color-accents-vibrant-mint-dark: var(--accents----vibrant---mint----dark);
+  --color-accents-vibrant-teal: var(--accents----vibrant---teal);
+  --color-accents-vibrant-teal-dark: var(--accents----vibrant---teal----dark);
+  --color-accents-vibrant-cyan: var(--accents----vibrant---cyan);
+  --color-accents-vibrant-cyan-dark: var(--accents----vibrant---cyan----dark);
+  --color-accents-vibrant-blue: var(--accents----vibrant---blue);
+  --color-accents-vibrant-blue-dark: var(--accents----vibrant---blue----dark);
+  --color-accents-vibrant-indigo: var(--accents----vibrant---indigo);
+  --color-accents-vibrant-indigo-dark: var(--accents----vibrant---indigo----dark);
+  --color-accents-vibrant-purple: var(--accents----vibrant---purple);
+  --color-accents-vibrant-purple-dark: var(--accents----vibrant---purple----dark);
+  --color-accents-vibrant-pink: var(--accents----vibrant---pink);
+  --color-accents-vibrant-pink-dark: var(--accents----vibrant---pink----dark);
+  --color-accents-vibrant-brown: var(--accents----vibrant---brown);
+  --color-accents-vibrant-brown-dark: var(--accents----vibrant---brown----dark);
+  --color-accents-vibrant-gray: var(--accents----vibrant---gray);
+  --color-accents-vibrant-gray-dark: var(--accents----vibrant---gray----dark);
 
-  /* Fills */
-  --color-fill-primary: var(--fills---primary);
-  --color-fill-secondary: var(--fills---secondary);
-  --color-fill-vibrant-primary: var(--fills----vibrant---primary);
-  --color-fill-vibrant-secondary: var(--fills----vibrant---secondary);
+  /* --- Fills --- */
+  --color-fills-primary: var(--fills---primary);
+  --color-fills-secondary: var(--fills---secondary);
+  --color-fills-tertiary: var(--fills---tertiary);
+  --color-fills-quaternary: var(--fills---quaternary);
+  --color-fills-quinary: var(--fills---quinary);
+  --color-fills-primary-dark: var(--fills---primary----dark);
+  --color-fills-secondary-dark: var(--fills---secondary----dark);
+  --color-fills-tertiary-dark: var(--fills---tertiary----dark);
+  --color-fills-quaternary-dark: var(--fills---quaternary----dark);
+  --color-fills-quinary-dark: var(--fills---quinary----dark);
 
-  /* Text Colors */
+  --color-fills-vibrant-primary: var(--fills----vibrant---primary);
+  --color-fills-vibrant-secondary: var(--fills----vibrant---secondary);
+  --color-fills-vibrant-tertiary: var(--fills----vibrant---tertiary);
+  --color-fills-vibrant-quaternary: var(--fills----vibrant---quaternary);
+  --color-fills-vibrant-quinary: var(--fills----vibrant---quinary);
+  --color-fills-vibrant-primary-dark: var(--fills----vibrant---primary----dark);
+  --color-fills-vibrant-secondary-dark: var(--fills----vibrant---secondary----dark);
+  --color-fills-vibrant-tertiary-dark: var(--fills----vibrant---tertiary----dark);
+  --color-fills-vibrant-quaternary-dark: var(--fills----vibrant---quaternary----dark);
+  --color-fills-vibrant-quinary-dark: var(--fills----vibrant---quinary----dark);
+
+  /* --- Text --- */
   --color-text-primary: var(--text---primary);
   --color-text-secondary: var(--text---secondary);
   --color-text-tertiary: var(--text---tertiary);
+  --color-text-quaternary: var(--text---quaternary);
+  --color-text-quinary: var(--text---quinary);
+  --color-text-primary-dark: var(--text---primary----dark);
+  --color-text-secondary-dark: var(--text---secondary----dark);
+  --color-text-tertiary-dark: var(--text---tertiary----dark);
+  --color-text-quaternary-dark: var(--text---quaternary----dark);
+  --color-text-quinary-dark: var(--text---quinary----dark);
 
-  /* UI Materials */
-  --color-ui-sidebar: var(--materials----controls---sidebar);
+  --color-text-vibrant-primary: var(--text----vibrant---primary);
+  --color-text-vibrant-secondary: var(--text----vibrant---secondary);
+  --color-text-vibrant-tertiary: var(--text----vibrant---tertiary);
+  --color-text-vibrant-quaternary: var(--text----vibrant---quaternary);
+  --color-text-vibrant-quinary: var(--text----vibrant---quinary);
+  --color-text-vibrant-primary-dark: var(--text----vibrant---primary----dark);
+  --color-text-vibrant-secondary-dark: var(--text----vibrant---secondary----dark);
+  --color-text-vibrant-tertiary-dark: var(--text----vibrant---tertiary----dark);
+
+  /* --- Materials & UI Controls --- */
+  --color-materials-ultrathick: var(--materials---ultrathick);
+  --color-materials-thick: var(--materials---thick);
+  --color-materials-medium: var(--materials---medium);
+  --color-materials-thin: var(--materials---thin);
+  --color-materials-ultrathin: var(--materials---ultrathin);
+  --color-materials-ultrathick-dark: var(--materials---ultrathick----dark);
+  --color-materials-thick-dark: var(--materials---thick----dark);
+  --color-materials-medium-dark: var(--materials---medium----dark);
+  --color-materials-thin-dark: var(--materials---thin----dark);
+  --color-materials-ultrathin-dark: var(--materials---ultrathin----dark);
+
+  --color-ui-menu: var(--materials----controls---menu);
+  --color-ui-popover: var(--materials----controls---popover);
   --color-ui-titlebar: var(--materials----controls---title--bar);
+  --color-ui-sidebar: var(--materials----controls---sidebar);
   --color-ui-selection: var(--materials----controls---selection--focused);
+  --color-ui-selection-unfocused: var(--materials----controls---selection--unfocused);
+  --color-ui-header-view: var(--materials----controls---header--view);
+  --color-ui-tooltip: var(--materials----controls---tooltip);
+  
+  --color-ui-menu-dark: var(--materials----controls---menu----dark);
+  --color-ui-popover-dark: var(--materials----controls---popover----dark);
+  --color-ui-titlebar-dark: var(--materials----controls---title--bar----dark);
+  --color-ui-sidebar-dark: var(--materials----controls---sidebar----dark);
+  --color-ui-selection-dark: var(--materials----controls---selection--focused----dark);
 
-  /* Font Sizes */
-  --font-size-mac-l-title: var(--large--title---regular);
+  /* --- Typography --- */
+  --font-size-mac-large-title: var(--large--title---regular);
   --font-size-mac-title-1: var(--title-1---regular);
   --font-size-mac-title-2: var(--title-2---regular);
+  --font-size-mac-title-3: var(--title-3---regular);
   --font-size-mac-headline: var(--headline---regular);
   --font-size-mac-body: var(--body---regular);
+  --font-size-mac-callout: var(--callout---regular);
+  --font-size-mac-subheadline: var(--subheadline---regular);
+  --font-size-mac-footnote: var(--footnote---regular);
+  --font-size-mac-caption-1: var(--caption-1---regular);
+  --font-size-mac-caption-2: var(--caption-2---regular);
 
-  /* Shadows */
+  /* --- Shadows & Effects --- */
   --shadow-mac-primary: var(--shadows----light---primary);
+  --shadow-mac-secondary: var(--shadows----light---secondary);
+  --shadow-mac-dark-primary: var(--shadows----dark---primary);
   --shadow-mac-card: var(--card---default);
+
+  /* --- Semantic Aliases (Your specific mappings) --- */
+  --color-todoist-red: var(--accents---red);
+  --color-mac-sidebar: var(--materials----controls---sidebar);
 }
 
 /* 3. RESET CSS INTEGRADO */
