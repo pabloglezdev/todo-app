@@ -1,12 +1,12 @@
-import Checkbox from '../../ui/Checkbox';
+import TaskItem from '../../tasks/TaskItem';
 
 const MainContent: React.FC = () => {
   return (
     <div>
-      <Checkbox />
-      <Checkbox priority="low" />
-      <Checkbox priority="medium" isChecked />
-      <Checkbox priority="high" />
+      <TaskItem />
+      <TaskItem priority="low" />
+      <TaskItem priority="medium" isChecked />
+      <TaskItem priority="high" />
     </div>
   );
 };
