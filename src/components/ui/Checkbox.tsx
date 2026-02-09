@@ -2,40 +2,25 @@ import { useState } from 'react';
 
 const getComputedCheckboxColor = (priority: PriorityType, checked: boolean) => {
   const checkboxColor = {
-    none: checked
-      ? 'bg-accents-gray border-accents-gray'
-      : 'bg-white border-accents-gray',
-    low: checked
-      ? 'bg-accents-pink border-accents-pink'
-      : 'bg-white border-accents-pink',
-    medium: checked
-      ? 'bg-accents-orange border-accents-orange'
-      : 'bg-white border-accents-orange',
-    high: checked
-      ? 'bg-accents-blue border-accents-blue'
-      : 'bg-white border-accents-blue',
+    none: `${checked ? 'bg-accents-gray' : 'bg-accents-gray/10'} border-accents-gray`,
+    low: `${checked ? 'bg-accents-pink' : 'bg-accents-pink/10'} border-accents-pink`,
+    medium: `${checked ? 'bg-accents-orange' : 'bg-accents-orange/10'} border-accents-orange`,
+    high: `${checked ? 'bg-accents-blue' : 'bg-accents-blue/10'} border-accents-blue`,
   };
 
   const hover = {
-    none: checked
-      ? 'hover:bg-accents-gray hover:border-accents-gray'
-      : 'hover:bg-white hover:border-accents-gray',
-    low: checked
-      ? 'hover:bg-accents-pink hover:border-accents-pink'
-      : 'hover:bg-white hover:border-accents-pink',
-    medium: checked
-      ? 'hover:bg-accents-orange hover:border-accents-orange'
-      : 'hover:bg-white hover:border-accents-orange',
-    high: checked
-      ? 'hover:bg-accents-blue hover:border-accents-blue'
-      : 'hover:bg-white hover:border-accents-blue',
+    none: `${checked ? 'hover:bg-accents-gray' : 'hover:bg-white'}`,
+    low: `${checked ? 'hover:bg-accents-pink' : 'hover:bg-white'}`,
+    medium: `${checked ? 'hover:bg-accents-orange' : 'hover:bg-white'}`,
+    high: `${checked ? 'hover:bg-accents-blue' : 'hover:bg-white'}`,
   };
+
   return `${checkboxColor[priority]} ${hover[priority]}`;
 };
 
 const getTickComputedStyles = (priority: PriorityType, checked: boolean) => {
   const tickColor = {
-    none: 'text-accents-gray',
+    none: 'text-accents-blue',
     low: 'text-accents-pink',
     medium: 'text-accents-orange',
     high: 'text-accents-blue',
