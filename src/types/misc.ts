@@ -1,1 +1,1 @@
-export type PriorityType = 'none' | 'low' | 'medium' | 'high';
+export type PriorityType = 4 | 3 | 2 | 1;

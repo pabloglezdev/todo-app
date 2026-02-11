@@ -1,19 +1,18 @@
-import { useState } from 'react';
 import type { PriorityType } from '../../../types/misc';
 
 const getComputedCheckboxColor = (priority: PriorityType, checked: boolean) => {
   const checkboxColor = {
-    none: `${checked ? 'bg-accents-gray' : 'bg-accents-gray/10'} border-accents-gray`,
-    low: `${checked ? 'bg-accents-pink' : 'bg-accents-pink/10'} border-accents-pink`,
-    medium: `${checked ? 'bg-accents-orange' : 'bg-accents-orange/10'} border-accents-orange`,
-    high: `${checked ? 'bg-accents-blue' : 'bg-accents-blue/10'} border-accents-blue`,
+    1: `${checked ? 'bg-accents-gray' : 'bg-accents-gray/10'} border-accents-gray`,
+    2: `${checked ? 'bg-accents-pink' : 'bg-accents-pink/10'} border-accents-pink`,
+    3: `${checked ? 'bg-accents-orange' : 'bg-accents-orange/10'} border-accents-orange`,
+    4: `${checked ? 'bg-accents-blue' : 'bg-accents-blue/10'} border-accents-blue`,
   };
 
   const hover = {
-    none: `${checked ? 'hover:bg-accents-gray' : 'hover:bg-white'}`,
-    low: `${checked ? 'hover:bg-accents-pink' : 'hover:bg-white'}`,
-    medium: `${checked ? 'hover:bg-accents-orange' : 'hover:bg-white'}`,
-    high: `${checked ? 'hover:bg-accents-blue' : 'hover:bg-white'}`,
+    1: `${checked ? 'hover:bg-accents-gray' : 'hover:bg-white'}`,
+    2: `${checked ? 'hover:bg-accents-pink' : 'hover:bg-white'}`,
+    3: `${checked ? 'hover:bg-accents-orange' : 'hover:bg-white'}`,
+    4: `${checked ? 'hover:bg-accents-blue' : 'hover:bg-white'}`,
   };
 
   return `${checkboxColor[priority]} ${hover[priority]}`;
@@ -21,10 +20,10 @@ const getComputedCheckboxColor = (priority: PriorityType, checked: boolean) => {
 
 const getTickComputedStyles = (priority: PriorityType, checked: boolean) => {
   const tickColor = {
-    none: 'text-accents-gray',
-    low: 'text-accents-pink',
-    medium: 'text-accents-orange',
-    high: 'text-accents-blue',
+    4: 'text-accents-gray',
+    3: 'text-accents-pink',
+    2: 'text-accents-orange',
+    1: 'text-accents-blue',
   };
 
   const finalColor = checked ? 'text-white' : tickColor[priority];
@@ -46,7 +45,7 @@ const styles = {
 };
 
 const Checkbox: React.FC<CheckboxProps> = (props) => {
-  const { priority = 'none', isChecked = false } = props;
+  const { priority = 1, isChecked = false } = props;
 
   return (
     <div
