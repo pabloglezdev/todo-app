@@ -21,7 +21,7 @@ const getComputedCheckboxColor = (priority: PriorityType, checked: boolean) => {
 
 const getTickComputedStyles = (priority: PriorityType, checked: boolean) => {
   const tickColor = {
-    none: 'text-accents-blue',
+    none: 'text-accents-gray',
     low: 'text-accents-pink',
     medium: 'text-accents-orange',
     high: 'text-accents-blue',
