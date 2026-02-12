@@ -45,7 +45,7 @@ const styles = {
 };
 
 const Checkbox: React.FC<CheckboxProps> = (props) => {
-  const { priority = 1, isChecked = false } = props;
+  const { priority = 4, isChecked = false } = props;
 
   return (
     <div

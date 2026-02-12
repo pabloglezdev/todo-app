@@ -2,11 +2,11 @@ import TaskItem from '../../tasks/TaskItem';
 
 const MainContent: React.FC = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-start w-full h-full">
       <TaskItem />
-      <TaskItem priority="low" />
-      <TaskItem priority="medium" isChecked />
-      <TaskItem priority="high" />
+      <TaskItem priority={3} />
+      <TaskItem priority={2} isChecked />
+      <TaskItem priority={1} />
     </div>
   );
 };
